@@ -48,6 +48,19 @@ QUẢN LÝ NHÂN SỰ - STAFF MANAGER
                 f"{employee['name_staff']}"
                 f"{employee['salary_staff']}"
             )
+        case "3":
+                find_id = int(input("Nhập ID cần tìm: "))
+            
+                found = False
+            
+                for employee in manager_info["staff"]:
+                    if employee["id"] == find_id:
+                        print(employee)
+                        found = True
+                        break
+            
+                if not found:
+                    print(f"Không tìm thấy nhân viên có ID {find_id}!")
         case "5" :
             print("thoát chương trình")
             break 
